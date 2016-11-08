@@ -21,11 +21,13 @@ namespace Personal_Website_MVC_4._6
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                      "~/Scripts/parallax-vanilla.min.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/include/css").Include(
+                      "~/include/bootstrap.css",
+                      "~/include/site.css",
+                      "~/include/css/parallax-vanilla.min.css"));
         }
     }
 }

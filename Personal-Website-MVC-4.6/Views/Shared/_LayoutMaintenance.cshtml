@@ -1,0 +1,38 @@
+﻿@model Personal_Website_MVC_4._6.Models.HomeViewModels.PersonProfile
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- For IE 9 and below. ICO should be 32x32 pixels in size -->
+    <!--[if IE]><link rel="shortcut icon" href="path/to/favicon.ico"><![endif]-->
+    <!-- Touch Icons - iOS and Android 2.1+ 180x180 pixels in size. -->
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <!-- Firefox, Chrome, Safari, IE 11+ and Opera. 196x196 pixels in size. -->
+    <link rel="icon" href="~/include/images/blue-heart.png">
+    <title>@ViewBag.Title - @ViewBag.SiteName</title>
+    @Styles.Render("~/include/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    
+    <div class="container">
+        <div class="container-fluid" style="margin-top:25vh;">
+            <h2 style="color: darkorange;">Changes are coming!</h2>
+            <h3 style="color: darkgreen;"></h3>
+
+        </div>
+        
+        <footer>
+           <div class="footer" style="margin-top:45vh;">
+               <hr />
+               <p>&copy; @DateTime.Now.Year - @ViewBag.Copyright</p>
+           </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
