@@ -17,6 +17,7 @@ namespace Personal_Website_MVC_4._6.Models.HomeViewModels
         public string[] SkillsList { get; set; }
         public string[] Awards { get; set; }
         public string PressRelease { get; set; }
-        
+        public string Title { get; set; }
+
     }
 }

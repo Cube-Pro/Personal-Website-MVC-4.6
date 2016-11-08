@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container-fluid">
         @RenderBody()
         <hr />
         <footer>
@@ -44,5 +44,20 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script>
+            pv.init({
+                container: {
+                    class: 'pv-container', // targeted container
+                    height: '50vh' // default height
+                },
+                block: {
+                    class: 'pv-block', // targeted parallax block
+                    speed: 1, // default speed
+                    image: "include/images/okc.jpg" // default image
+                }
+
+            });
+
+    </script>
 </body>
 </html>
