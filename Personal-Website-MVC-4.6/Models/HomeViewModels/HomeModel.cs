@@ -18,6 +18,8 @@ namespace Personal_Website_MVC_4._6.Models.HomeViewModels
         public string[] Awards { get; set; }
         public string PressRelease { get; set; }
         public string Title { get; set; }
-
+        public string ShortBiio { get; set; }
+        public string PersonalQuote { get; set; }
+        public string QuoteAuthor { get; set; }
     }
 }

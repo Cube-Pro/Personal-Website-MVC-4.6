@@ -136,9 +136,13 @@
     <Content Include="include\bootstrap.css" />
     <Content Include="include\bootstrap.min.css" />
     <Content Include="include\css\parallax-vanilla.min.css" />
+    <Content Include="include\images\biopic.jpg" />
     <Content Include="include\images\blue-heart.png" />
     <Content Include="include\images\okc.jpg" />
     <Content Include="include\images\night-life.jpg" />
+    <Content Include="include\images\road-1.jpg" />
+    <Content Include="include\images\road-12.jpg" />
+    <Content Include="include\images\road-8.jpg" />
     <Content Include="include\parallax-vanilla.css" />
     <Content Include="include\parallax-vanilla.min.css" />
     <Content Include="include\Site.css" />
@@ -199,6 +203,12 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DemoTools\DemoTools\DemoTools.csproj">
+      <Project>{0eed7d60-4e1b-4228-b3c1-00c907860dcd}</Project>
+      <Name>DemoTools</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

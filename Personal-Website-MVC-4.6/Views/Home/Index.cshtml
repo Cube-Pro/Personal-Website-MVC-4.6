@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Personal_Website_MVC_4._6.Models.HomeViewModels.PersonProfile
+@{
     ViewBag.Title = "Home Page";
 
     if(ViewBag.Maintenance == 1)
@@ -12,38 +13,88 @@
 
 }
 
-<div class="pv-container" para-height="50vh">
-    <div class="pv-block" pv-speed=-1.0 pv-image="/include/images/night-life.jpg"></div>
-</div>
-<div class="pv-container" para-height="50vh">
-    <div class="pv-block" pv-speed=1.0 pv-image="/include/images/night-life.jpg"></div>
-</div>
-
-<div class="container">
-    <div class="col-sm-12 col-md-12 col-lg-12">
-        <img src="@Model.BioImagePath" class="img-responsive img-bio-left" />
-        <h1>@Model.FirstName @Model.LastName</h1>
-        <h2>@Model.Title</h2>
-
-        <p>@Model.BioDetails</p>
+@*Intro Header*@
+<header id="header">
+    <div class="pv-container" para-height="100vh">
+        <div class="pv-block" style="z-index: 5000;" pv-speed=-1.0 pv-image="/include/images/night-life.jpg">
+            @*<h2 class="text-center" style="padding-top: 30vh;">Welcome to Lorin's Official Website</h2>*@
+        </div>
     </div>
-</div>
+    <div class="pv-container" para-height="50vh">
+        <div class="pv-block" pv-speed=1.0 pv-image="/include/images/night-life.jpg">
 
+        </div>
+    </div>
+</header>
 
-<div class="pv-container" para-height="100vh">
-    <div class="pv-block" pv-speed=-1.0 pv-image="include/images/okc.jpg"></div>
-</div>
+@* Intro Section *@
+<section id="intro">
+    <div class="container" style="min-height: 80vh; background-color: #ffffff; padding: 5rem;">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <img src="@Model.BioImagePath" class="img-responsive"  />
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <h1 class="text-center">@Model.FirstName @Model.LastName</h1>
+            <h2 class="text-center">@Model.Title</h2>
+            <ul style="padding-left: 3rem;">
+                @foreach (var item in Model.SkillsList)
+            {
+                    <li style="list-style: none; padding-left:3rem;"><h4>@item</h4></li>
+                }
+            </ul>
+            <p>@Model.ShortBiio</p>
+        </div>
+    </div>
+</section>
 
-<div class="container" style="min-height: 60vh; background-color: #000000;">
-    <h2 class="text-center">More Stuff</h2>
-</div>
+@*Quote Aside*@
+<aside id="quote">
+    <div class="pv-container" para-height="20vh">
+        <div class="pv-block" pv-speed=6.0 pv-image="/include/images/okc.jpg">
+            <div id="quote-block">
+                <h2 class="text-center" style="">@Model.PersonalQuote</h2>
+                <h3 class="text-center"> - @Model.QuoteAuthor</h3>
+            </div>
+        </div>
+    </div>
+</aside>
 
-<div class="pv-container" para-height="100vh">
-    <div class="pv-block" pv-speed=-1.0 pv-image="include/images/night-life.jpg"></div>
-</div>
+@* About Section *@
+<section id="about">
+     <div class="container" style="">
+         <h2 class="text-center">About</h2>
+        <div class="col-sm-12 col-md-6 col-lg-6" id="about-details">
+            <p>@Model.BioDetails</p>
+        </div>
+         <div class="col-sm-12 col-md-6 col-lg-6" id="about-img-container" style="">
+             <div class="row">
+                 <img src="@Model.BioImagePath" class="img-responsive" style="" />
+             </div>
+             <div class="row" id="request">
+                <h4 class="text-center">Request a Resume</h4>
+                <div class="input-group">
+                     <input type="text" class="form-control" placeholder="">
+                     <span class="input-group-btn">
+                         <button class="btn btn-default" type="button">Go!</button>
+                     </span>
+                 </div><!-- /input-group -->
+             </div><!-- /.col-lg-6 -->
+             
+         </div>
+    </div>
+</section>
 
-<div class="container" style="min-height: 60vh; background-color: #000000;">
-    <h2 class="text-center">More Stuff Too</h2>
-</div>
+<aside>
+    <div class="pv-container" para-height="50vh">
+        <div class="pv-block" pv-speed=1.0 pv-image="/include/images/night-life.jpg"></div>
+    </div>
+</aside>
+
+@*Social Section*@
+<section id="contact">
+    <div class="container" style="min-height: 50vh; background-color: #ffffff;">
+        <h2 class="text-center">Social / Contact</h2>
+    </div>
+</section>
 
 

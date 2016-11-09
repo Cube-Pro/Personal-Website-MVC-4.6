@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DemoTools;
 
 namespace Personal_Website_MVC_4._6.Controllers
 {
@@ -12,15 +13,21 @@ namespace Personal_Website_MVC_4._6.Controllers
     {
         public ActionResult Index()
         {
+            var details = new DemoFill();
 
             var siteProfile = new PersonProfile
             {
                 FirstName = "Lorin",
                 LastName = "Hart",
                 Email = "L.Mark.Hart@gmail.com",
-                BioDetails = "",
-                BioImagePath = "",
-                SkillsList = new string[] {"Cold Fusion", "MySQL", "MSSQL", "PHP"},
+                BioDetails = details.FillWithLatinText(250),
+                BioImagePath = "/include/images/biopic.jpg",
+                SkillsList = new string[] { "Computer Programmer", "Entrepreneur", "Business Consultant", "Children's Author" },
+                Title = "",
+                ShortBiio = details.FillWithLatinText(75),
+                PersonalQuote = "If you dont know what I'm doing, how do you know I'm wrong?",
+                QuoteAuthor = "Lorin M. Hart"
+
 
 
             };

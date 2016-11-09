@@ -1,24 +1,107 @@
-﻿body {
-    /*padding-top: 50px;*/
-    /*padding-bottom: 20px;*/
+﻿@import url('https://fonts.googleapis.com/css?family=Yesteryear');
+body {
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif;
+    
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+/*#region navbar */
+
+.navbar{
+    background-color: #000000;
+    opacity: .75;
+    border-style: none;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.navbar-brand {
+    font-family: 'Yesteryear', cursive;
+    font-size: 3rem;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.navbar-brand {
+    color: darkorange !important;
 }
+
+.navbar li > a {
+    color: red !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
+/*#endregion navbar*/
+
+/*#region Intro Section */
+
+#intro p, #about p, contact p {
+    font-size: 1.5rem;
+}
+
+#intro img {
+    height: 60vh;
+    margin: auto;
+    /*padding-top: 5rem;*/
+}
+
+/*#endregion Intro Section*/
+
+/*#region Quote Section */
+
+#quote {
+    color: #000000;
+    text-shadow: 2px 2px 2px #ffffff;
+}
+
+#quote-block {
+    padding-top: 30vh;
+}
+
+#quote-block h1, #quote-block h2, #quote-block h3, #quote-block h4, #quote-block h5 {
+    font-family: Impact;
+}
+
+/*#endregion */
+
+/*#region About Section */
+
+#about {
+    min-height: 80vh;
+    background-color: #ffffff;
+    padding: 5rem;
+}
+
+#about-img-container {
+    min-height: 70vh;
+}
+
+#about img {
+    height: 60vh;
+    margin: auto;
+    padding-top: 5rem;
+}
+
+#request {
+    width: 75%;
+    margin: auto;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+/*#endregion About Section*/
+
+/*#region Footer Section */
+
+#footer {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #999999;
+}
+
+    #footer p {
+        font-size: .75rem;
+        font-family: inherit;
+        text-align: center;
+    }
+
+/*#endregion Footer Section */
