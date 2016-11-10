@@ -13,7 +13,8 @@
 
 }
 
-@*Intro Header*@
+<!-- #region Header Section -->
+
 <header id="header">
     <div class="pv-container" para-height="100vh">
         <div class="pv-block" style="z-index: 5000;" pv-speed=-1.0 pv-image="/include/images/night-life.jpg">
@@ -27,14 +28,19 @@
     </div>
 </header>
 
-@* Intro Section *@
+<!-- #endregion Header Section-->
+
+<!-- #region Intro Section -->
+
+
 <section id="intro">
     <div class="container" style="min-height: 80vh; background-color: #ffffff; padding: 5rem;">
         <div class="col-sm-12 col-md-6 col-lg-6">
-            <img src="@Model.BioImagePath" class="img-responsive"  />
+            <img src="@Model.BioImagePath" class="img-responsive" />
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">
             <h1 class="text-center">@Model.FirstName @Model.LastName</h1>
+            <hr class="hr-heart-single" />
             <h2 class="text-center">@Model.Title</h2>
             <ul style="padding-left: 3rem;">
                 @foreach (var item in Model.SkillsList)
@@ -47,8 +53,13 @@
     </div>
 </section>
 
-@*Quote Aside*@
-<aside id="quote">
+
+<!-- #endregion Intro Section-->
+
+<!-- #region Quote Section-->
+
+
+<section id="quote">
     <div class="pv-container" para-height="20vh">
         <div class="pv-block" pv-speed=6.0 pv-image="/include/images/okc.jpg">
             <div id="quote-block">
@@ -57,32 +68,42 @@
             </div>
         </div>
     </div>
-</aside>
+</section>
 
-@* About Section *@
+
+
+<!-- #endregion -->
+
+<!-- #region About Section -->
+
+
 <section id="about">
-     <div class="container" style="">
-         <h2 class="text-center">About</h2>
+    <div class="container" style="">
+        <h2 class="text-center">About</h2>
+        <hr class="hr-heart-single" />
         <div class="col-sm-12 col-md-6 col-lg-6" id="about-details">
             <p>@Model.BioDetails</p>
         </div>
-         <div class="col-sm-12 col-md-6 col-lg-6" id="about-img-container" style="">
-             <div class="row">
-                 <img src="@Model.BioImagePath" class="img-responsive" style="" />
-             </div>
-             <div class="row" id="request">
+        <div class="col-sm-12 col-md-6 col-lg-6" id="about-img-container" style="">
+            <div class="row">
+                <img src="@Model.BioImagePath" class="img-responsive" style="" />
+            </div>
+            <div class="row" id="request">
                 <h4 class="text-center">Request a Resume</h4>
                 <div class="input-group">
-                     <input type="text" class="form-control" placeholder="">
-                     <span class="input-group-btn">
-                         <button class="btn btn-default" type="button">Go!</button>
-                     </span>
-                 </div><!-- /input-group -->
-             </div><!-- /.col-lg-6 -->
-             
-         </div>
+                    <input type="text" class="form-control" placeholder="">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+
+        </div>
     </div>
 </section>
+
+
+<!-- #endregion About Section -->
 
 <aside>
     <div class="pv-container" para-height="50vh">
@@ -90,11 +111,12 @@
     </div>
 </aside>
 
-@*Social Section*@
+<!-- #region Contect Section -->
+
 <section id="contact">
     <div class="container" style="min-height: 50vh; background-color: #ffffff;">
         <h2 class="text-center">Social / Contact</h2>
     </div>
 </section>
 
-
+<!-- #endregion Contect Section-->
