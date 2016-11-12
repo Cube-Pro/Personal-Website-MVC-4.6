@@ -172,3 +172,23 @@ hr.hr-heart-single:after {
     }
 
 /*#endregion Footer Section */
+
+.oval_parent{
+    padding:1rem;
+    background:black;
+    width:50vw;
+    height:50vh;
+    overflow:hidden;
+}
+
+.oval {
+/*width: 100px;
+height: 200px;*/
+margin: auto;  
+background: white;
+-moz-border-radius: 25rem / 25rem;
+-webkit-border-radius: 25rem / 25rem;
+border-radius: 25rem / 25rem;
+
+}
+

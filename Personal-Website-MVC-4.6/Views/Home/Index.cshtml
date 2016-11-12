@@ -86,7 +86,7 @@
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6" id="about-img-container" style="">
             <div class="row">
-                <img src="@Model.BioImagePath" class="img-responsive" style="" />
+                <img src="@Model.BioImagePath" class="img-responsive img-circle" style="" />
             </div>
             <div class="row" id="request">
                 <h4 class="text-center">Request a Resume</h4>
@@ -116,6 +116,15 @@
 <section id="contact">
     <div class="container" style="min-height: 50vh; background-color: #ffffff;">
         <h2 class="text-center">Social / Contact</h2>
+        <form action="/" method="post">
+            <label>Name</label>
+            <input type="text" class="form-control" name="name" value="" />
+            <label>Email</label>
+            <input type="email" class="form-control" name="email" value="" />
+            <label>Message</label>
+            <textarea class="form-control" name="message"></textarea>
+            <input type="button" name="submit" value="Submit" class="btn -btn-info" />
+        </form>
     </div>
 </section>
 
